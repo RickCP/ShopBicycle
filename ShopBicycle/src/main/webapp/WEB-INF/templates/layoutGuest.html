@@ -26,17 +26,17 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="brand"  >SXĐ</a>
+				<a class="brand" th:href="@{/}"  >SXĐ</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li class="dropdown">
 							<a  class="dropdown-toggle" data-toggle="dropdown">Trang Chủ<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a>Trang chủ</a></li>
-								<li><a>Giỏ Hàng</a></li>
-								<li><a >Thanh Toán</a></li>
-								<li><a>Về Công Ty</a></li>
-								<li><a >Chi Tiết Sản Phẩm</a></li>
+								<li><a th:href="@{/}">Trang chủ</a></li>
+								<li><a th:href="@{/cart}">Giỏ Hàng</a></li>
+								<li><a th:href="@{/checkout}" >Thanh Toán</a></li>
+								<li><a th:href="@{/about}">Về Công Ty</a></li>
+								<li><a th:href="@{/orderDetail}">Chi Tiết Sản Phẩm</a></li>
 								
 							</ul>
 						</li>
@@ -70,8 +70,8 @@
 						</div>
 	
 						<div class="well">
+							<h4>DANH MỤC XE ĐẠP</h4>
 							<ul class="nav nav-list">
-								<li class="nav-header">Danh Mục Xe Đạp</li>
 								<li class="active">
 									<a href="#">Xe đạp thông dụng</a>
 								</li>
@@ -81,8 +81,11 @@
 								<li>
 									<a href="#">Xe đạp trẻ em</a>
 								</li>
-		
-								<li class="nav-header">Tìm theo phân loại sản phẩm</li>
+							</ul>
+						</div>
+						<div class="well">
+							<h4>PHÂN LOẠI SẢN PHẨM</h4>
+							<ul class="nav nav-list">
 								<li>
 									<a href="#">Sản phẩm mới xuất hiện</a>
 								</li>
@@ -92,9 +95,10 @@
 								<li>
 									<a href="#">Sản phẩm tốt giá tốt</a>
 								</li>
-		
 							</ul>
-						</div>			
+						</div>	
+						<div layout:fragment="a">
+						</div>		
 				</div>
 				 <div layout:fragment="content">
     			</div>
@@ -109,10 +113,11 @@
 				<div class="span4">
 					<h4>Thông Tin</h4>
 					<ul class="nav nav-stacked">
-						<li><a href="#">Trang Chủ</a></li>
-						<li><a href="#">Dịch Vụ</a></li>
-						<li><a href="#">Sản Phẩm</a></li>
-						<li><a href="#">Về Công Ty</a></li>
+						<li><a th:href="@{/}">Trang chủ</a></li>
+						<li><a th:href="@{/cart}">Giỏ Hàng</a></li>
+						<li><a th:href="@{/checkout}" >Thanh Toán</a></li>
+						<li><a th:href="@{/about}">Về Công Ty</a></li>
+						<li><a th:href="@{/orderDetail}">Chi Tiết Sản Phẩm</a></li>
 					</ul>
 				</div> 
 
@@ -139,15 +144,18 @@
 
 			<div class="row">
 				<div class="span6">
-					<p>&copy; Copyright 2012.&nbsp;<a href="#">Privacy</a>&nbsp;&amp;&nbsp;<a href="#">Terms and Conditions</a></p>
+					<p>&copy; Copyright 2014.&nbsp;<a href="#">Đà Nẵng</a>&nbsp;&amp;&nbsp;<a href="#">shopxedap.com</a></p>
 				</div>
 				<div class="span6">
-					<a class="pull-right" href="http://www.responsivewebmobile.com" target="_blank">credits by Đức Chó Lác</a>
+					<a class="pull-right" href="http://www.responsivewebmobile.com" target="_blank">credits by Tùng</a>
 				</div>
 			</div>
 		</div>
 	</footer>	
-	
+	<script src="../../resources/js/jquery-1.10.0.min.js" th:src="@{/resources/js/jquery-1.10.0.min.js}"></script>
+	<script src="../../resources/js/bootstrap/js/bootstrap.min.js" th:src="@{/resources/js/bootstrap/js/bootstrap.min.js}"></script>
+	<script src="../../resources/js/holder.js" th:src="@{/resources/js/holder.js}"></script>
+	<script src="../../resources/js/script.js" th:src="@{/resources/js/script.js}"></script>
 	
   </body>
 </html>
