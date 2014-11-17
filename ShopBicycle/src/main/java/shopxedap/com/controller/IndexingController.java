@@ -22,7 +22,7 @@ public class IndexingController {
 	@RequestMapping("/orderItem")
 	public String getOrderItemPage()
 	{
-		return "Copy of cart";
+		return "orderItem";
 	}
 	
 	@RequestMapping("/checkOut")

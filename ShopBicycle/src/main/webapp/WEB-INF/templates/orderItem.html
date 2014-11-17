@@ -1,123 +1,28 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %> 
-<%
-String Contextpath = request.getContextPath();
-String basePath = request.getScheme() + "://"
-+ request.getServerName() + ":" + request.getServerPort()
-+ Contextpath + "/";
-%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
-	<title>Shop Xe Đạp - Đà Nẵng</title>
-
-	<!-- Included Bootstrap CSS Files -->
-	<link rel="stylesheet" href="<%=Contextpath%>/resources/js/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="<%=Contextpath%>/resources/js/bootstrap/css/bootstrap-responsive.min.css" />
-	
-	<!-- Includes FontAwesome -->
-	<link rel="stylesheet" href="<%=Contextpath%>/resources/css/font-awesome/css/font-awesome.min.css" />
-
-	<!-- Css -->	
-	<link rel="stylesheet" href="<%=Contextpath%>/resources/css/style.css" />
-
-</head>
-<body>
-
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="brand" href="<%=Contextpath%>/">SXĐ</a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li class="dropdown">
-							<a href="<%=Contextpath%>/" class="dropdown-toggle" data-toggle="dropdown">Trang Chủ<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="<%=Contextpath%>/">Trang chủ</a></li>
-								<li><a href="<%=Contextpath%>/">Sản Phẩm</a></li>
-								<li><a href="<%=Contextpath%>/cart">Giỏ Hàng</a></li>
-								<li><a href="<%=Contextpath%>/checkout">Thanh Toán</a></li>
-							</ul>
-						</li>
-					</ul>
-					<form class="navbar-form form-search pull-right">
-						<input id="Search" name="Search" type="text" placeholder="Điền nội dung muốn tìm kiếm" class="input-medium search-query">
-						<button type="submit" class="btn">Tìm Kiếm</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="span3">
-				<div class="well">
-
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-							<i class="icon-shopping-cart"></i>
-								3 item - $999.99
-								<b class="caret"></b></a>
-						</a>
-						<div class="dropdown-menu well" role="menu" aria-labelledby="dLabel">
-							<p>Item x 1 <span class="pull-right">$333.33</span></p>
-							<p>Item x 1 <span class="pull-right">$333.33</span></p>
-							<p>Item x 1 <span class="pull-right">$333.33</span></p>
-							<a href="#" class="btn btn-primary">Checkout</a>
-						</div>
-					</div>
-					
-				</div>
-
-				<div class="well">
-					<ul class="nav nav-list">
-						<li class="nav-header">Danh Mục Xe Đạp</li>
-						<li class="active">
-							<a href="#">Xe đạp thông dụng</a>
-						</li>
-						<li>
-							<a href="#">Xe đạp thời trang</a>
-						</li>
-						<li>
-							<a href="#">Xe đạp trẻ em</a>
-						</li>
-
-						<li class="nav-header">Tìm theo phân loại sản phẩm</li>
-						<li>
-							<a href="#">Sản phẩm mới xuất hiện</a>
-						</li>
-						<li>
-							<a href="#">Sản phẩm Đang khuyến mãi</a>
-						</li>
-						<li>
-							<a href="#">Sản phẩm tốt giá tốt</a>
-						</li>
-
-					</ul>
-				</div>			
-			</div>
-			
-			<div class="span9">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="layoutGuest">
+  <head>
+    <title>Chi tiết sản phẩm</title>
+    <script src="content-script.js"></script>
+  </head>
+  <body>
+  		<div layout:fragment="content">
+  		<div class="span9">
 				<div class="row">
 					<div class="span5">
 						<div id="items-carousel" class="carousel slide mbottom0">
 							<div class="carousel-inner">
 								<div class="active item">
-									<img class="media-object" src="<%=Contextpath%>/resources/holder.js/470x310" alt="" />
+									<img class="media-object" th:src="@{/resources/holder.js/470x310}" alt=""></img>
 								</div>
 
 								<div class="item">
-									<img class="media-object" src="<%=Contextpath%>/resources/holder.js/470x310" alt="" />
+									<img class="media-object" th:src="@{/resources/holder.js/470x310}" alt="" ></img>
 								</div>
 
 								<div class="item">
-									<img class="media-object" src="<%=Contextpath%>/resources/holder.js/470x310" alt="" />
+									<img class="media-object"  th:src="@{/resources/holder.js/470x310}" alt="" ></img>
 								</div>
 							</div>
 							<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -173,58 +78,6 @@ String basePath = request.getScheme() + "://"
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<hr />
-
-	<footer id="footer" class="vspace20">
-		<div class="container">
-			<div class="row">
-				<div class="span4">
-					<h4>Thông Tin</h4>
-					<ul class="nav nav-stacked">
-						<li><a href="#">Trang Chủ</a>
-						<li><a href="#">Dịch Vụ</a>
-						<li><a href="#">Sản Phẩm</a>
-						<li><a href="#">Về Công Ty</a>
-					</ul>
-				</div> 
-
-				<div class="span4">
-					<h4>Địa Điểm và Liên Lạc</h4>
-					<p><i class="icon-map-marker"></i>&nbsp;193 Nguyễn Lương Bằng - Liên Chiểu - Đà Nẵng</p>
-					<p><i class="icon-phone"></i>&nbsp;Phone: 234 739.126.72</p>
-					<p><i class="icon-print"></i>&nbsp;Fax: 213 123.12.090</p>
-					<p><i class="icon-envelope"></i>&nbsp;Email: info@sxd.com</p>
-					<p><i class="icon-globe"></i>&nbsp;Web: http://www.shopxedap.com</p>
-				</div>
-
-				<div class="span4">
-					<h4>Theo dõi</h4>
-					<p>Nhập email để nhận thông tin từ website shopxedap</p>
-					<form class="form-newsletter">
-						<div class="input-append">
-							<input type="email" class="span2" placeholder="Email của bạn">
-							<button type="submit" class="btn">Theo dõi</button>
-						</div>
-					</form>
-				</div>
 			</div>
-
-			<div class="row">
-				<div class="span6">
-					<p>&copy; Copyright 2012.&nbsp;<a href="#">Privacy</a>&nbsp;&amp;&nbsp;<a href="#">Terms and Conditions</a></p>
-				</div>
-				<div class="span6">
-					<a class="pull-right" href="http://www.responsivewebmobile.com" target="_blank">credits by Đức Chó Lác</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script src="<%=Contextpath%>/resources/js/jquery-1.10.0.min.js"></script>
-	<script src="<%=Contextpath%>/resources/js/bootstrap/js/bootstrap.min.js"></script>
-	<script src="<%=Contextpath%>/resources/js/holder.js"></script>
-	<script src="<%=Contextpath%>/resources/js/script.js"></script>
-</body>
+  </body>
 </html>
