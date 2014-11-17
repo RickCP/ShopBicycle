@@ -31,10 +31,10 @@ public class IndexingController {
 		return "checkOut";
 	}
 	
-	@RequestMapping("/demo")
+	@RequestMapping("/about")
 	public String getDemoPage()
 	{
-		return "content1";
+		return "about";
 	}
 	
 	

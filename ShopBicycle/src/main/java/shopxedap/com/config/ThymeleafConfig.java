@@ -36,6 +36,7 @@ public class ThymeleafConfig {
 		resolver.setTemplateEngine(templateEngine());
 		resolver.setCharacterEncoding("UTF-8");
 		resolver.setContentType("text/html; charset=UTF-8");
+		resolver.setCache(false);
 		return resolver;
 	}
 }
