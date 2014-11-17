@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="layoutGuest">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Trang Chi Tiết Giỏ Hàng</title>
+</head>
+<body>
+			<div layout:fragment="content">
+				<div class="span9">
+					<div class="row">
+						<div class="span5">
+							<div id="items-carousel" class="carousel slide mbottom0">
+								<div class="carousel-inner">
+									<div class="active item">
+										<img class="media-object" th:src="@{/resources/js/holder.js/470x310}" alt="" > </img>
+									</div>
+	
+									<div class="item">
+										<img class="media-object" th:src="@{/resources/js/holder.js/470x310}" alt="" ></img>
+									</div>
+	
+									<div class="item">
+										<img class="media-object" th:src="@{/resources/js/holder.js/470x310}" alt="" ></img>
+									</div>
+								</div>
+								<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+								<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+							</div>
+						</div>
+	
+						<div class="span4">
+							<h4>Tên Sản Phẩm</h4>
+							<h5>Mã Model</h5>
+							<p>Đây là một chiếc xe đạp và chắc chắn đó là một chiếc xe đạp có thể đạp được.Xin vui lòng mua gấp.Nếu trong thời gian 1 tuần bạn không mua.Bạn sẽ nhận FREE chiếc xe này.</p>
+							<h4>$333.33</h4>
+							<h5>Tùy chọn</h5>
+							<form>
+								<select id="size" name="size">
+									<option>Theo lứa tuổi</option>
+									<option>Trẻ em</option>
+									<option>Trung Niên</option>
+									<option>Người lớn</option>
+								</select>
+	
+								<select id="color" name="color">
+									<option>Chọn màu</option>
+									<option>Đỏ</option>
+									<option>Xanh</option>
+									<option>Xanh lá cây</option>
+								</select>
+	
+								<label>
+									<input type="text" id="quantity" name="quantity" value="1" class="span1" />&nbsp;Chiếc
+								</label>
+								<button class="btn btn-primary">Thêm vào giỏ</button>
+							</form>
+							
+						</div>
+					</div>
+	
+					<div class="row">
+						<div class="span9">
+							<ul class="nav nav-tabs" id="tabs">
+								<li class="active"><a href="#description">Mô tả</a></li>
+								<li><a href="#reviews"><span class="badge badge-inverse">10</span> Người đã xem</a></li>
+							</ul>
+	
+							<div class="tab-content">
+								<div class="tab-pane active" id="description">
+									<p>
+									Đây là một chiếc xe đạp và chắc chắn đó là một chiếc xe đạp có thể đạp được.Xin vui lòng mua gấp.Nếu trong thời gian 1 tuần bạn không mua.Bạn sẽ nhận FREE chiếc xe này.
+									</p>
+								</div>
+								<div class="tab-pane" id="reviews">...</div>
+							</div>
+						</div>
+					</div>
+				</div>
+      			
+    		</div>
+</body>
+</html>

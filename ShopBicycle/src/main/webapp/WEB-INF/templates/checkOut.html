@@ -1,0 +1,280 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %> 
+<%
+String Contextpath = request.getContextPath();
+String basePath = request.getScheme() + "://"
++ request.getServerName() + ":" + request.getServerPort()
++ Contextpath + "/";
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Shop Xe Đạp - Đà Nẵng</title>
+
+	<!-- Included Bootstrap CSS Files -->
+	<link rel="stylesheet" href="<%=Contextpath%>/resources/js/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="<%=Contextpath%>/resources/js/bootstrap/css/bootstrap-responsive.min.css" />
+	
+	<!-- Includes FontAwesome -->
+	<link rel="stylesheet" href="<%=Contextpath%>/resources/css/font-awesome/css/font-awesome.min.css" />
+
+	<!-- Css -->	
+	<link rel="stylesheet" href="<%=Contextpath%>/resources/css/style.css" />
+
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="<%=Contextpath%>/">SXĐ</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="dropdown">
+							<a href="<%=Contextpath%>/" class="dropdown-toggle" data-toggle="dropdown">Trang Chủ<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="<%=Contextpath%>/">Trang chủ</a></li>
+								<li><a href="<%=Contextpath%>/">Sản Phẩm</a></li>
+								<li><a href="<%=Contextpath%>/cart">Giỏ Hàng</a></li>
+								<li><a href="<%=Contextpath%>/checkout">Thanh Toán</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form form-search pull-right">
+						<input id="Search" name="Search" type="text" placeholder="Điền nội dung muốn tìm kiếm" class="input-medium search-query">
+						<button type="submit" class="btn">Tìm Kiếm</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<h2>Quá Trình Thanh Toán</h2>
+				<div class="accordion" id="accordion2">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+								BƯỚC 1: Đăng Nhập
+							</a>
+						</div>
+						<div id="collapseOne" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								<div class="span4">
+									<h4>Đăng kí mới</h4>
+									<form>
+									
+										<button class="btn btn-primary">Đăng Kí</button>
+									</form>
+									<em>Khi đăng kí tài khoản, bạn có thể mua sản phẩm nhanh hơn và có thể chỉnh sửa việc đặt hàng của bạn.</em>
+								</div>
+
+								<div class="span4 offset2">
+									<h4>Bạn đã có tài khoản</h4>
+									<form>
+										<label>Địa Chỉ E-Mail</label>
+										<input type="text" name="email" id="email" />
+										
+										<label>Mật Khẩu</label>
+										<input type="text" name="password" id="password" />
+										<br />
+										<a href="#">Quên Mật Khẩu?</a>
+										<br />
+										<button class="btn btn-primary">Đăng Nhập</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+								STEP 2: Thông Tin Chi Tiết Tài Khoản
+							</a>
+						</div>
+						<div id="collapseTwo" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<form>
+									<label> Tên:</label>
+									<input type="text" class="large-field" value="" name="firstname">
+
+									<label>Họ:</label>
+									<input type="text" class="large-field" value="" name="lastname">
+
+									<label>Công Ty:</label>
+									<input type="text" class="large-field" value="" name="company">
+
+									<label> Địa Chỉ Công Ty:</label>
+									<input type="text" class="large-field" value="" name="address_1">
+
+									
+									<label> Thành Phố :</label>
+									<input type="text" class="large-field" value="" name="city">
+
+									<br />
+									<button class="btn btn-primary">BƯỚC 3</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+								STEP 4: Phương Thức Chuyển
+							</a>
+						</div>
+						<div id="collapseFour" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<form>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										Chuyển Miễn Phí <b>($0.00)</b>
+									</label>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+										Chuyển Với Phí <b>($10.00)</b>
+									</label>
+									<button class="btn btn-primary">BƯỚC 5</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+								BƯỚC 5: Cách Trả
+							</a>
+						</div>
+						<div id="collapseFive" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<form>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										Paypal</b>
+									</label>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+										Cash on Delivery</b>
+									</label>
+									<button class="btn btn-primary">BƯỚC 6</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+								BƯỚC 6: HOÀN TẤT THANH TOÁN
+							</a>
+						</div>
+						<div id="collapseSix" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<table class="table table-striped table-hover">
+									<thead>
+										<tr>
+											<th>Tên Sản Phẩm</th>
+											<th>Qty</th>
+											<th>Đơn Vị Giá</th>
+											<th>Tổng</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>AB29837</td>
+											<td>1</td>
+											<td>$333.33</td>
+											<td>$333.33</td>
+										</tr>
+										<tr>
+											<td>AC34423</td>
+											<td>2</td>
+											<td>$333.33</td>
+											<td>$666.66</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<dl class="dl-horizontal pull-right">
+									<dt>Tổng Tiền Chưa Phí:</dt>
+									<dd>$999.99</dd>
+
+									<dt>Phí Vận Chuyển:</dt>
+									<dd>$0.01</dd>
+									<dt>Tổng Tiền Có Phí:</dt>
+									<dd>$1000.00</dd>
+								</dl>
+								<div class="clearfix"></div>
+								<a href="#" class="btn btn-success pull-right">Xác Nhận</a>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>	
+		</div>
+	</div>	
+
+	<hr />
+	<footer id="footer" class="vspace20">
+		<div class="container">
+			<div class="row">
+				<div class="span4">
+					<h4>Thông Tin</h4>
+					<ul class="nav nav-stacked">
+						<li><a href="#">Trang Chủ</a>
+						<li><a href="#">Dịch Vụ</a>
+						<li><a href="#">Sản Phẩm</a>
+						<li><a href="#">Về Công Ty</a>
+					</ul>
+				</div> 
+
+				<div class="span4">
+					<h4>Địa Điểm và Liên Lạc</h4>
+					<p><i class="icon-map-marker"></i>&nbsp;193 Nguyễn Lương Bằng - Liên Chiểu - Đà Nẵng</p>
+					<p><i class="icon-phone"></i>&nbsp;Phone: 234 739.126.72</p>
+					<p><i class="icon-print"></i>&nbsp;Fax: 213 123.12.090</p>
+					<p><i class="icon-envelope"></i>&nbsp;Email: info@sxd.com</p>
+					<p><i class="icon-globe"></i>&nbsp;Web: http://www.shopxedap.com</p>
+				</div>
+
+				<div class="span4">
+					<h4>Theo dõi</h4>
+					<p>Nhập email để nhận thông tin từ website shopxedap</p>
+					<form class="form-newsletter">
+						<div class="input-append">
+							<input type="email" class="span2" placeholder="Email của bạn">
+							<button type="submit" class="btn">Theo dõi</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="span6">
+					<p>&copy; Copyright 2012.&nbsp;<a href="#">Privacy</a>&nbsp;&amp;&nbsp;<a href="#">Terms and Conditions</a></p>
+				</div>
+				<div class="span6">
+					<a class="pull-right" href="http://www.responsivewebmobile.com" target="_blank">credits by Đức Chó Lác</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="<%=Contextpath%>/resources/js/jquery-1.10.0.min.js"></script>
+	<script src="<%=Contextpath%>/resources/js/bootstrap/js/bootstrap.min.js"></script>
+	<script src="<%=Contextpath%>/resources/js/holder.js"></script>
+	<script src="<%=Contextpath%>/resources/js/script.js"></script>
+</body>
+</html>

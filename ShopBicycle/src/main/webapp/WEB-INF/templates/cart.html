@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="layoutGuest">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Trang Giỏ Hàng</title>
+</head>
+<body>
+			<div layout:fragment="content">
+      			<div class="span9">
+				<h2>Giỏ hàng của bạn</h2>
+				<form>
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Tên Sản Phẩm</th>
+							<th>Số Lượng</th>
+							<th>Đơn Vị Giá</th>
+							<th>Tổng Tiền</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>AB29837</td>
+							<td><input id="quantity-1" name="quantity-1" type="text" class="span1" value="1" />&nbsp;<a href="#"><i class="icon-refresh"></i></a><a href="#"><i class="icon-trash"></i></a></td>
+							<td>$333.33</td>
+							<td>$333.33</td>
+						</tr>
+						<tr>
+							<td>AC34423</td>
+							<td><input id="quantity-1" name="quantity-1" type="text" class="span1" value="2" />&nbsp;<a href="#"><i class="icon-refresh"></i></a><a href="#"><i class="icon-trash"></i></a></td>
+							<td>$333.33</td>
+							<td>$666.66</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+
+			<dl class="dl-horizontal pull-right">
+				<dt>Tổng tiền chưa phí:</dt>
+				<dd>$999.99</dd>
+				
+				<dt>Phí vận chuyển:</dt>
+				<dd>$0.01</dd>
+
+				<dt>Tổng Tiền có phí :</dt>
+				<dd>$1000.00</dd>
+			</dl>
+			<div class="clearfix"></div>
+			<a href="#" class="btn btn-success pull-right">Thanh Toán</a>
+			<a href="#" class="btn btn-primary">Quay Lại Trang Chủ</a>
+		</div>
+    	</div>
+</body>
+</html>
