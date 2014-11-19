@@ -2,14 +2,18 @@ package shopxedap.com.domain;
 
 // Generated Nov 13, 2014 3:37:51 PM by Hibernate Tools 3.4.0.CR1
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -46,7 +50,7 @@ public class SanPham implements java.io.Serializable {
 	private String hinhSp;
 
 	@Column(name = "giaSP", precision = 12, scale = 0)
-	private Float giaSp;
+	private BigDecimal giaSp;
 
 	@Column(name = "dacDiemSP", length = 250)
 	private String dacDiemSp;
@@ -68,7 +72,7 @@ public class SanPham implements java.io.Serializable {
 	}
 
 	public SanPham(LoaiSanPham loaiSanPham, String maSp, String tenSp,
-			String hinhSp, Float giaSp, String dacDiemSp, Date dateIn,
+			String hinhSp, BigDecimal giaSp, String dacDiemSp, Date dateIn,
 			Set<CtPhieuNhap> ctPhieuNhaps, Set<TonKho> tonKhos,
 			Set<CtDonDatHang> ctDonDatHangs) {
 		this.loaiSanPham = loaiSanPham;
@@ -123,11 +127,11 @@ public class SanPham implements java.io.Serializable {
 		this.hinhSp = hinhSp;
 	}
 
-	public Float getGiaSp() {
+	public BigDecimal getGiaSp() {
 		return this.giaSp;
 	}
 
-	public void setGiaSp(Float giaSp) {
+	public void setGiaSp(BigDecimal giaSp) {
 		this.giaSp = giaSp;
 	}
 
